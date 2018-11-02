@@ -19,6 +19,7 @@
 		490B67E8218BEF91003B4CFF /* GiphyViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B67E7218BEF91003B4CFF /* GiphyViewOutput.swift */; };
 		490B67EB218BF131003B4CFF /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B67EA218BF131003B4CFF /* MainRouter.swift */; };
 		490B67EE218BF441003B4CFF /* Giphy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490B67ED218BF441003B4CFF /* Giphy.storyboard */; };
+		490B67F0218BFE2C003B4CFF /* LightColorTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490B67EF218BFE2C003B4CFF /* LightColorTheme.xcassets */; };
 		49157407218712E7001F704D /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49157406218712E7001F704D /* MainAssembly.swift */; };
 		49157409218712F1001F704D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49157408218712F1001F704D /* MainViewController.swift */; };
 		4915740B21871329001F704D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915740A21871329001F704D /* MainViewModel.swift */; };
@@ -76,6 +77,7 @@
 		490B67E7218BEF91003B4CFF /* GiphyViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyViewOutput.swift; sourceTree = "<group>"; };
 		490B67EA218BF131003B4CFF /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		490B67ED218BF441003B4CFF /* Giphy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Giphy.storyboard; sourceTree = "<group>"; };
+		490B67EF218BFE2C003B4CFF /* LightColorTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LightColorTheme.xcassets; sourceTree = "<group>"; };
 		49157406218712E7001F704D /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		49157408218712F1001F704D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4915740A21871329001F704D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -246,6 +248,14 @@
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
+		490B67F1218BFE54003B4CFF /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				490B67EF218BFE2C003B4CFF /* LightColorTheme.xcassets */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		49157405218712D2001F704D /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +340,7 @@
 				491BE002218321F9008736AC /* Info.plist */,
 				491BDFFF218321F9008736AC /* LaunchScreen.storyboard */,
 				490B67D1218BE808003B4CFF /* Localizable.strings */,
+				490B67F1218BFE54003B4CFF /* Theme */,
 				491574132187155A001F704D /* UserStories */,
 			);
 			path = Favorites;
@@ -475,6 +486,7 @@
 				491BE001218321F9008736AC /* LaunchScreen.storyboard in Resources */,
 				491BDFFE218321F9008736AC /* Assets.xcassets in Resources */,
 				4915741721871589001F704D /* MainCollectionViewCell.xib in Resources */,
+				490B67F0218BFE2C003B4CFF /* LightColorTheme.xcassets in Resources */,
 				490B67EE218BF441003B4CFF /* Giphy.storyboard in Resources */,
 				491BDFF9218321F6008736AC /* Main.storyboard in Resources */,
 			);
@@ -735,7 +747,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -791,7 +803,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

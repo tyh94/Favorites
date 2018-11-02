@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ug-hf-K8z">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.41960784313725491" green="0.27843137254901962" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="mainColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vWb-sW-QZJ">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -39,7 +40,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.41960784313725491" green="0.27843137254901962" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="mainColor"/>
                         <constraints>
                             <constraint firstItem="8ug-hf-K8z" firstAttribute="leading" secondItem="2qB-49-QUp" secondAttribute="leading" id="U5E-OZ-CXG"/>
                             <constraint firstItem="2qB-49-QUp" firstAttribute="trailing" secondItem="8ug-hf-K8z" secondAttribute="trailing" id="g3e-d9-pUq"/>
@@ -57,4 +58,9 @@
             <point key="canvasLocation" x="84" y="72"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.41960784313725491" green="0.27843137254901962" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

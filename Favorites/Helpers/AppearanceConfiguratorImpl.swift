@@ -14,18 +14,10 @@ class AppearanceConfiguratorImpl: NSObject, AppearanceConfigurator {
     
     func configure() {
         let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor(red: 107.0 / 255.0,
-                                                   green: 71.0 / 255.0,
-                                                   blue: 219.0 / 255.0,
-                                                   alpha: 1.0)
-        navigationBarAppearace.barTintColor =  UIColor(red: 217.0 / 255.0,
-                                                       green: 217.0 / 255.0,
-                                                       blue: 217.0 / 255.0,
-                                                       alpha: 1.0)
+        navigationBarAppearace.tintColor = UIColor(named: "mainColor")
+        navigationBarAppearace.barTintColor =  UIColor(named: "navigationBarTintColor")
         let labelAppearence = UILabel.appearance()
-        labelAppearence.textColor = UIColor(red: 107.0 / 255.0,
-                                            green: 71.0 / 255.0,
-                                            blue: 219.0 / 255.0,
-                                            alpha: 1.0)
+        labelAppearence.textColor = UIColor(named: "mainColor")
     }
+    
 }
