@@ -26,6 +26,7 @@ final class MainAssembly: Assembly {
             let model = MainViewModel()
             model.viewInput = controller
             model.factory = r.resolve(MainFactory.self)
+            model.router = r.resolve(MainRouter.self, argument: controller)
             return model
         }
         
@@ -36,6 +37,13 @@ final class MainAssembly: Assembly {
         container.register(ListAdapter.self) { (r, controller: MainViewController) in
             ListAdapter(updater: ListAdapterUpdater(),
                         viewController: controller)
+        }
+        
+        container.register(MainRouter.self) { (r, controller: MainViewController) in
+            let router = MainRouter()
+            router.controller = controller
+            router.giphyAssembly = GiphyAssembly()
+            return router
         }
     }
 }

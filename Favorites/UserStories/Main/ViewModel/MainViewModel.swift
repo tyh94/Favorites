@@ -6,12 +6,14 @@
 //  Copyright © 2018 Татьяна. All rights reserved.
 //
 
-import Foundation
+import IGListKit
 
 final class MainViewModel: NSObject, MainViewOutput {
     
+    
     weak var viewInput: MainViewInput!
     var factory: MainFactory!
+    var router: MainRouter!
     
     // MARK: MainViewOutput
 
@@ -20,4 +22,7 @@ final class MainViewModel: NSObject, MainViewOutput {
         viewInput.update(cellObjects: cellObjects)
     }
     
+    func didSelect(object: MainCollectionViewCellObject) {
+        router.openGiphyModul()
+    }
 }

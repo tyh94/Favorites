@@ -10,4 +10,6 @@ protocol MainViewOutput: AnyObject {
 
     func moduleWasLoaded()
     
+    func didSelect(object: MainCollectionViewCellObject)
+    
 }

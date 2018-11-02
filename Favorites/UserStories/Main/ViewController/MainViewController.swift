@@ -9,8 +9,7 @@
 import UIKit
 import IGListKit
 
-final class MainViewController: UIViewController, MainViewInput, ListAdapterDataSource {
-    
+final class MainViewController: UIViewController, MainViewInput, ListAdapterDataSource, ListSingleSectionControllerDelegate {
 
     var viewOutput: MainViewOutput!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -50,7 +49,7 @@ final class MainViewController: UIViewController, MainViewInput, ListAdapterData
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return ListSingleSectionController(nibName: String(describing: MainCollectionViewCell.self),
+        let section =  ListSingleSectionController(nibName: String(describing: MainCollectionViewCell.self),
                                            bundle: nil,
                                            configureBlock: { (cellObject, cell) in
                                             if let cell = cell as? MainCollectionViewCell {
@@ -60,9 +59,19 @@ final class MainViewController: UIViewController, MainViewInput, ListAdapterData
         }) { (cellObject, contect) -> CGSize in
             return CGSize(width: self.view.frame.size.width, height: 60)
         }
+        section.selectionDelegate = self
+        return section
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
+    }
+    
+    // MARK: ListSingleSectionControllerDelegate
+    
+    func didSelect(_ sectionController: ListSingleSectionController, with object: Any) {
+        if let object = object as? MainCollectionViewCellObject {
+            viewOutput.didSelect(object: object)
+        }
     }
 }
