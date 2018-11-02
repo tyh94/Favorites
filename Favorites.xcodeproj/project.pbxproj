@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		49091D3C2187F609000F6FBE /* Main+SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49091D3B2187F609000F6FBE /* Main+SwinjectStoryboard.swift */; };
 		490B67CF218BE808003B4CFF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 490B67D1218BE808003B4CFF /* Localizable.strings */; };
+		490B67D5218BE927003B4CFF /* AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B67D4218BE927003B4CFF /* AppDelegateAssembly.swift */; };
+		490B67D8218BE998003B4CFF /* AppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B67D7218BE998003B4CFF /* AppearanceConfigurator.swift */; };
+		490B67DA218BE9B4003B4CFF /* AppearanceConfiguratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B67D9218BE9B4003B4CFF /* AppearanceConfiguratorImpl.swift */; };
 		49157407218712E7001F704D /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49157406218712E7001F704D /* MainAssembly.swift */; };
 		49157409218712F1001F704D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49157408218712F1001F704D /* MainViewController.swift */; };
 		4915740B21871329001F704D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915740A21871329001F704D /* MainViewModel.swift */; };
@@ -56,6 +59,9 @@
 		49091D3B2187F609000F6FBE /* Main+SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+SwinjectStoryboard.swift"; sourceTree = "<group>"; };
 		490B67D0218BE808003B4CFF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		490B67D2218BE880003B4CFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		490B67D4218BE927003B4CFF /* AppDelegateAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateAssembly.swift; sourceTree = "<group>"; };
+		490B67D7218BE998003B4CFF /* AppearanceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfigurator.swift; sourceTree = "<group>"; };
+		490B67D9218BE9B4003B4CFF /* AppearanceConfiguratorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfiguratorImpl.swift; sourceTree = "<group>"; };
 		49157406218712E7001F704D /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		49157408218712F1001F704D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4915740A21871329001F704D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +161,24 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		490B67D3218BE916003B4CFF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				491BDFF3218321F6008736AC /* AppDelegate.swift */,
+				490B67D4218BE927003B4CFF /* AppDelegateAssembly.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		490B67D6218BE98C003B4CFF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				490B67D7218BE998003B4CFF /* AppearanceConfigurator.swift */,
+				490B67D9218BE9B4003B4CFF /* AppearanceConfiguratorImpl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		49157405218712D2001F704D /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,8 +254,9 @@
 		491BDFF2218321F6008736AC /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				490B67D6218BE98C003B4CFF /* Helpers */,
 				491574132187155A001F704D /* UserStories */,
-				491BDFF3218321F6008736AC /* AppDelegate.swift */,
+				490B67D3218BE916003B4CFF /* AppDelegate */,
 				491BDFFD218321F9008736AC /* Assets.xcassets */,
 				491BDFFF218321F9008736AC /* LaunchScreen.storyboard */,
 				491BE002218321F9008736AC /* Info.plist */,
@@ -505,11 +530,14 @@
 				4915741D218715D2001F704D /* MainFactory.swift in Sources */,
 				4915741621871589001F704D /* MainCollectionViewCell.swift in Sources */,
 				491BDFFC218321F6008736AC /* Favorites.xcdatamodeld in Sources */,
+				490B67D8218BE998003B4CFF /* AppearanceConfigurator.swift in Sources */,
 				4915741021871451001F704D /* MainViewInput.swift in Sources */,
 				4915740D21871340001F704D /* MainFactoryImpl.swift in Sources */,
+				490B67DA218BE9B4003B4CFF /* AppearanceConfiguratorImpl.swift in Sources */,
 				49157407218712E7001F704D /* MainAssembly.swift in Sources */,
 				491BDFF4218321F6008736AC /* AppDelegate.swift in Sources */,
 				49091D3C2187F609000F6FBE /* Main+SwinjectStoryboard.swift in Sources */,
+				490B67D5218BE927003B4CFF /* AppDelegateAssembly.swift in Sources */,
 				49157409218712F1001F704D /* MainViewController.swift in Sources */,
 				4915740B21871329001F704D /* MainViewModel.swift in Sources */,
 				4915741A218715A8001F704D /* MainCollectionViewCellObject.swift in Sources */,
