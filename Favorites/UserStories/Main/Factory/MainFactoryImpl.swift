@@ -13,7 +13,7 @@ final class MainFactoryImpl: NSObject, MainFactory {
     // MARK: MainFactory
     
     func cellObject() -> [MainCollectionViewCellObject] {
-        return [MainCollectionViewCellObject(type: .giphy, text: "Giphy")]
+        return [MainCollectionViewCellObject(type: .giphy, text: NSLocalizedString("MAIN_CELL_GIPHY_LABEL", comment: ""))]
     }
     
 }
