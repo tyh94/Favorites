@@ -15,14 +15,14 @@ final class MainAssembly: Assembly {
     // MARK: Assembly
     func assemble(container: Container) {
         
-        var controller: MainViewController!
         container.storyboardInitCompleted(MainViewController.self) { r, c in
-            controller = c
-            c.viewOutput = r.resolve(MainViewOutput.self)
-            c.adapter = r.resolve(ListAdapter.self)
+            c.viewOutput = r.resolve(MainViewOutput.self,
+                                     argument: c as MainViewController)
+            c.adapter = r.resolve(ListAdapter.self,
+                                  argument: c as MainViewController)
         }
         
-        container.register(MainViewOutput.self) { r in
+        container.register(MainViewOutput.self) { (r, controller: MainViewController) in
             let model = MainViewModel()
             model.viewInput = controller
             model.factory = r.resolve(MainFactory.self)
@@ -33,7 +33,7 @@ final class MainAssembly: Assembly {
             MainFactoryImpl()
         }
         
-        container.register(ListAdapter.self) { r in
+        container.register(ListAdapter.self) { (r, controller: MainViewController) in
             ListAdapter(updater: ListAdapterUpdater(),
                         viewController: controller)
         }
