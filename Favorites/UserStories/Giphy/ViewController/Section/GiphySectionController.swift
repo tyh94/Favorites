@@ -33,10 +33,10 @@ class GiphySectionController: ListBindingSectionController<ListDiffable>, ListBi
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>,
                            cellForViewModel viewModel: Any,
                            at index: Int) -> UICollectionViewCell & ListBindable {
-        return collectionContext?.dequeueReusableCell(of: GiphyCollectionViewCell.self,
-                                                       withReuseIdentifier: String(describing: GiphyCollectionViewCell.self),
-                                                       for: sectionController,
-                                                       at: index) as! GiphyCollectionViewCell
+        return collectionContext?.dequeueReusableCell(withNibName: String(describing: GiphyCollectionViewCell.self),
+                                                      bundle: nil,
+                                                      for: sectionController,
+                                                      at: index) as! GiphyCollectionViewCell
     }
     
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>,

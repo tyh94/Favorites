@@ -16,6 +16,7 @@ class AppearanceConfiguratorImpl: NSObject, AppearanceConfigurator {
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor(named: "mainColor")
         navigationBarAppearace.barTintColor =  UIColor(named: "navigationBarTintColor")
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "mainColor") as Any]
         let labelAppearence = UILabel.appearance()
         labelAppearence.textColor = UIColor(named: "mainColor")
     }

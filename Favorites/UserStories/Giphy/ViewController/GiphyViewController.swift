@@ -19,6 +19,7 @@ class GiphyViewController: UIViewController, GiphyViewInput, ListAdapterDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // TODO: Удалить
         let cellObjects = [GiphyCollectionViewCellObject(),GiphyCollectionViewCellObject(),GiphyCollectionViewCellObject(),GiphyCollectionViewCellObject(),GiphyCollectionViewCellObject()]
         let sectionObject = GiphySectionControllerObject()
         sectionObject.cellObjects = cellObjects
